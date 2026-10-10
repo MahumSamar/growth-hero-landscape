@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turn your growth ideas into reality today</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --sky: #f8f7f5;
+      --ink: #0a0a0a;
+    }
+
+    html,
+    body {
+      height: 100%;
+      background: var(--sky);
+      color: var(--ink);
+      font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      height: 100svh;
+      min-height: 460px;
+      overflow: hidden;
+      background: var(--sky);
+      isolation: isolate;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 100%;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20vh 24px 0;
+      padding-top: 20svh;
+    }
+
+    .hero__title {
+      font-size: clamp(38px, 5.3vw, 92px);
+      font-weight: 600;
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      max-width: 12.5em;
+      text-wrap: balance;
+    }
+
+    .hero__subtitle {
+      margin-top: clamp(16px, 1.75vw, 30px);
+      font-size: clamp(15px, 1.47vw, 24px);
+      font-weight: 400;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(12px, 1.37vw, 22px);
+      margin-top: clamp(18px, 1.75vw, 30px);
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55em;
+      height: clamp(38px, 3.6vw, 58px);
+      padding: 0 clamp(14px, 1.37vw, 24px);
+      border: 1px solid var(--ink);
+      border-radius: clamp(6px, 0.6vw, 10px);
+      font: inherit;
+      font-size: clamp(14px, 1.4vw, 22px);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn svg {
+      width: 1em;
+      height: 1em;
+      flex: none;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover svg {
+      transform: translateX(3px);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    .btn--primary {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .btn--primary:hover {
+      background: #262626;
+    }
+
+    .btn--secondary {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .btn--secondary:hover {
+      background: #f0efec;
+    }
+
+    /* ---------- Tablet ---------- */
+    @media (max-width: 900px) {
+      .hero__content {
+        padding-top: 16vh;
+        padding-top: 16svh;
+      }
+
+      .hero__title {
+        font-size: clamp(38px, 7.4vw, 64px);
+      }
+    }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 560px) {
+      .hero__content {
+        padding: 12vh 20px 0;
+        padding-top: 12svh;
+      }
+
+      .hero__title {
+        font-size: clamp(34px, 10.4vw, 46px);
+        line-height: 1;
+      }
+
+      .hero__subtitle {
+        max-width: 17em;
+      }
+
+      .hero__actions {
+        width: 100%;
+        max-width: 340px;
+      }
+
+      .btn {
+        height: 46px;
+        font-size: 15px;
+        flex: 1 1 auto;
+      }
+    }
+
+    /* Short landscape phones */
+    @media (max-height: 480px) and (orientation: landscape) {
+      .hero__content {
+        padding-top: 9vh;
+      }
+
+      .hero__title {
+        font-size: clamp(28px, 4.6vw, 44px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn,
+      .btn svg {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <video
+      class="hero__bg"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261010_083251_13b4826a-7f90-4c57-9c7f-85f56a4b345b.mp4"
+      poster="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261010_083208_3668e370-9096-4423-aff8-0af48ecddf88.png"
+      autoplay
+      muted
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    ></video>
+
+    <div class="hero__content">
+      <h1 class="hero__title">Turn your growth ideas into reality today</h1>
+      <p class="hero__subtitle">Start your 14-day Pro trial today. No credit card required.</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#">
+          Start building for free
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" />
+          </svg>
+        </a>
+        <a class="btn btn--secondary" href="#">
+          Get a demo
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // The scene grows in once and holds on its final frame.
+    // Reduced-motion: skip the animation and show the finished scene.
+    (function () {
+      var video = document.querySelector(".hero__bg");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        video.removeAttribute("autoplay");
+        video.pause();
+        video.poster = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20261010_053151_9c743d52-da50-45ec-a725-364a2f51d949.png";
+        return;
+      }
+      var play = video.play();
+      if (play && play.catch) play.catch(function () {});
+    })();
+  </script>
+</body>
+</html>
